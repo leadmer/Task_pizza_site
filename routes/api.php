@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('pizza', 'Api\PizzaController@index');
 Route::get('pizza/{id}', 'Api\PizzaController@show');
 
-Route::post('order', ['uses' => 'Api\OrderController@show', 'https']);
+Route::post('order', 'Api\OrderController@store');
 Route::get('order/{id}', 'Api\OrderController@show');
 
